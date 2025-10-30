@@ -35,7 +35,7 @@ def get_enrichment(
     gene_input_list: list[str],
     organism: str | int,
     annot_data_set: str
-) -> dict:
+) -> list:
     """
     Identify whether a pathway is overrepresented or enriched for in a given list of genes using the Panther services
 
@@ -52,7 +52,8 @@ def get_enrichment(
     }
 
     response = requests.post(endpoint, params)
-    return response.json()["results"]["result"]
+    results = [result for result in response.json()["results"]["result"] if int(result["number_in_list"]) > 0]
+    return results
 
 
 if __name__ == "__main__":
