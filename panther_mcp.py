@@ -1,9 +1,3 @@
-# - endpoint https://pantherdb.org/services/oai/pantherdb/enrich/overrep
-# - args
-#     required
-#         geneInputList: list of genese (multiple formats)
-#         organism: 9606 (human)
-
 import requests
 import json
 from fastmcp import FastMCP
