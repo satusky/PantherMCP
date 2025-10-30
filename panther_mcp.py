@@ -40,7 +40,7 @@ def get_enrichment(
     Identify whether a pathway is overrepresented or enriched for in a given list of genes using the Panther services
 
     args:
-    gene_input_list: list of experimentally identifies genes
+    gene_input_list: list of experimentally identified genes
     organism: organism from the Panther supported organisms list
     annot_data_set: Annotated dataset to compare gene list, from the Panther supported annotated datasets list
     """
