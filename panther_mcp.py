@@ -47,7 +47,7 @@ def get_enrichment(
     endpoint = BASE_URL + "/services/oai/pantherdb/enrich/overrep"
     params = {
         "geneInputList": ",".join(gene_input_list),
-        "organism": organism,
+        "organism": str(organism),
         "annotDataSet": annot_data_set
     }
 
